@@ -1,0 +1,9 @@
+@import './_partials/variable.scss';
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import './components/wrapper.scss';
+@import './components/button.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+}

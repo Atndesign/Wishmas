@@ -1,6 +1,7 @@
 .wrapper{
-    background: url("/img/bg.png");
+    background-image: url("/img/bg.png");
     background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     header{
         h1{
@@ -10,6 +11,7 @@
             color: $white;
             text-transform: uppercase;
             font-weight: 800;
+            font-size: 26px;
         }
         .progressState{
             margin-bottom: $spacer * 2;
@@ -36,38 +38,47 @@
     background: white;
     padding-top: 24px;
     padding-bottom: 60px;
+    overflow: hidden;
     .step-container{
         display: flex;
         position: relative;
-        right: 10px;
+        height: 400px;
+        right: 0;
     }
     .step{
         margin-right: $spacer;
         min-width: 100%;
         max-width: 100%;
     }
-    .step1{
+    
+}
+
+@include media-breakpoint-up(lg) {
+    .appWrapper{
+        overflow-x: hidden;
+        overflow-y: initial;
+    }
+    .step-container{
+        display: flex;
         position: relative;
-        p{
-            font-family: $heading-font-family;
-            text-align: center;
-            font-size: 26px;
-        }
-        .choice-img{
-            padding: $spacer;
-        }
-        .image-wrapper{
-            height: 350px;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-        .nextStep-btn{
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70%;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
+        height: 100%;
+        right: 0;
+    }
+    .custom-container{
+        padding-left: $spacer * 2;
+        padding-right: $spacer * 2;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .wrapper{
+        height: 80%;
+        width: 800px;
+        background-image: url("/img/bg.png");
+        background-size: 200%;
+        background-position: center;
     }
 }

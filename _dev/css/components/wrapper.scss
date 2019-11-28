@@ -1,19 +1,18 @@
 .wrapper{
-    background-image: url("/img/bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     header{
+        position: relative;
+        background-color: $primary;
         h1{
             text-align: center;
             padding-top: $spacer * 2;
             margin-bottom: (48 / 16) * $spacer;
             color: $white;
-            text-transform: uppercase;
-            font-weight: 800;
             font-size: 26px;
+            font-family: $heading-font-family;
         }
         .progressState{
+            transform: translateY(12px);
             margin-bottom: $spacer * 2;
             .progressList{
                 padding-left: 0px;
@@ -21,13 +20,12 @@
                 display: flex;
                 justify-content: space-between;
                 .progressCircle{
-                    height: 30px;
-                    width: 30px;
+                    height: 24px;
+                    width: 24px;
                     border-radius: 100%;
-                    background: white;
+                    border: 2px solid $primary;
+                    background-color: white;
                     &.active{
-                        border: 4px solid white;
-                        background: $secondary;
                     }
                 }
             }
@@ -41,7 +39,6 @@
     overflow: hidden;
     .step-container{
         display: flex;
-        position: relative;
         height: 400px;
         right: 0;
     }
@@ -50,35 +47,7 @@
         min-width: 100%;
         max-width: 100%;
     }
-    
 }
 
 @include media-breakpoint-up(lg) {
-    .appWrapper{
-        overflow-x: hidden;
-        overflow-y: initial;
-    }
-    .step-container{
-        display: flex;
-        position: relative;
-        height: 100%;
-        right: 0;
-    }
-    .custom-container{
-        padding-left: $spacer * 2;
-        padding-right: $spacer * 2;
-    }
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .wrapper{
-        height: 80%;
-        width: 800px;
-        background-image: url("/img/bg.png");
-        background-size: 200%;
-        background-position: center;
-    }
 }

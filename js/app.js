@@ -32,7 +32,10 @@ function removeClass(array,classname){
     });
 }
 //step 2
-
+function getInputs(node){
+    var nodeElt = document.getElementById(node)
+    return nodeElt.innerText;
+}
 //step 3
 
 //step 4

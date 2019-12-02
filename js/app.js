@@ -11,8 +11,8 @@ var nexBtn3= document.getElementById("nextStep3");
 var nexBtn4 = document.getElementById("nextStep4");
 var nexBtn5 = document.getElementById("nextStep5");
 
-var steps = [step1Container,step2Container,step3Container,step4Container];
-var nextBtns = [nexBtn1,nexBtn2,nexBtn3,nexBtn4];
+var steps = [step1Container,step2Container,step3Container,step4Container,step5Container];
+var nextBtns = [nexBtn1,nexBtn2,nexBtn3,nexBtn4,nexBtn5];
 
 //step 1
 var choices = document.querySelectorAll('.choice-img-container > img')

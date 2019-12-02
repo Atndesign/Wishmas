@@ -65,6 +65,21 @@ nexBtn3.addEventListener("click",function(){
 
 //step 4
 
+nexBtn4.addEventListener("click",function(){
+    var message = document.getElementById("message").value;
+    if(message == ""){
+        var conf = confirm("Send a empty text ?")
+        if(conf){
+            changeStep(5)
+        }
+        else{
+            return
+        }
+    }
+    else{
+        changeStep(5)
+    }
+})
 
 //Functions
 

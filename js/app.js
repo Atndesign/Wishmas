@@ -98,6 +98,7 @@ nexBtn4.addEventListener("click",function(){
     }
     else{
         receiver = `Hello ${receiver}!`;
+        sender = `${sender} wish you a merry Christmas, here is the message:`;
         messageDisplay.innerText = message;
         changeStep(5)
     }

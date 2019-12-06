@@ -1,0 +1,16 @@
+.resultContainer{
+    position: relative;
+    padding: $spacer;
+    height: 400px;
+    .resultText{
+        top: 20px;
+        left: 20px;
+    }
+    .overlayDark{
+        background: rgba(0,0,0,0.5);
+    }
+    .resultText{
+        color: white;
+        font-weight: bold;
+    }
+}

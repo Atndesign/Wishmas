@@ -14,10 +14,16 @@ var nexBtn5 = document.getElementById("nextStep5");
 var steps = [step1Container,step2Container,step3Container,step4Container,step5Container];
 var nextBtns = [nexBtn1,nexBtn2,nexBtn3,nexBtn4,nexBtn5];
 
+var resultImg = document.getElementById("resultImg");
+
+//Final vars
+var bg,sender,receiver,messageText;
+
 //step 1
 var choices = document.querySelectorAll('.choice-img-container > img')
 var choiceArr = Array.from(choices);
 var imgLink;
+
 
 choices.forEach(img => {
     img.addEventListener("click", function(){
@@ -33,6 +39,7 @@ choices.forEach(img => {
     })
 })
 nexBtn1.addEventListener("click",function(){
+    bg = imgLink;
     changeStep(2)
 })
 
@@ -45,6 +52,7 @@ nexBtn2.addEventListener("click",function(){
         return
     }
     else{
+        sender = senderName;
         changeStep(3)
     }
 })
@@ -59,6 +67,7 @@ nexBtn3.addEventListener("click",function(){
         return
     }
     else{
+        receiver = receiverName;
         changeStep(4)
     }
 })
@@ -67,6 +76,8 @@ nexBtn3.addEventListener("click",function(){
 
 nexBtn4.addEventListener("click",function(){
     var message = document.getElementById("message").value;
+    // result
+    resultImg.src = bg;
     if(message == ""){
         var conf = confirm("Send a empty text ?")
         if(conf){
@@ -77,6 +88,7 @@ nexBtn4.addEventListener("click",function(){
         }
     }
     else{
+        messageText = message;
         changeStep(5)
     }
 })
@@ -98,7 +110,7 @@ function changeStep(stepNbr){
         }
     }
 }
-function getInputs(node){
-    var nodeElt = document.getElementById(node)
+function getInputs(nodeName){
+    var nodeElt = document.getElementById(nodeName)
     return nodeElt.innerText;
 }

@@ -1,16 +1,25 @@
 .resultContainer{
     position: relative;
-    padding: $spacer;
-    height: 400px;
-    .resultText{
-        top: 20px;
-        left: 20px;
-    }
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     .overlayDark{
-        background: rgba(0,0,0,0.5);
+        position: absolute;
+        background: rgba(0,0,0,0.7);
+        height: 100%;
+        width: 100%;
     }
     .resultText{
         color: white;
         font-weight: bold;
+        &.receiver{
+            font-size: 2rem;
+        }
+    }
+    .textContainer{
+        position: fixed;
+        z-index: 1;
+        padding: $spacer * 2;
     }
 }

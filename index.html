@@ -27,8 +27,8 @@
         <div class="custom-container container">
             <div class="appWrapper">
                 <div class="step-container">
-                    <!-- <div class="step step1">
-                        <p>choose your background</p>
+                    <div id="step1" class="step step1" style="display: block">
+                        <p class="title">choose your background</p>
                         <div class="image-wrapper">
                             <div class="row">
                                 <div class="col-md-4 choice-img-container">
@@ -51,45 +51,35 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="step1" class="nextStep-btn btn btn-primary" disabled>Next</button>
-                    </div> -->
-                    <div class="step step2">
+                        <button id="nextStep1" class="nextStep-btn btn btn-primary" >Next</button>
+                    </div>
+                    <div id="step2" class="step step2" style="display: none">
                         <p class="title">Who are you ?</p>
                         <p>What's your name</p>
-                        <input class="form-control customInput" placeholder="Let know your sender who you are..." type="text" name="" id="">
-                        <button class="nextStep-btn btn btn-primary">Next</button>
+                        <input id="senderName" class="form-control customInput" placeholder="Let know your receiver, who you are..." type="text" name="" id="">
+                        <button id="nextStep2" class="nextStep-btn btn btn-primary" >Next</button>
                     </div>
-                    <div class="step step3">
+                    <div id="step3" class="step step3" style="display: none">
                         <p class="title">Who is the card for ?</p>
                         <p>What’s her/his name ?</p>
-                        <input class="form-control customInput" placeholder="Let know your sender who you are..." type="text" name="" id="">
-                        <button class="nextStep-btn btn btn-primary">Next</button>
+                        <input id="receiverName" class="form-control customInput" placeholder="Let know your receiver, who you are..." type="text" name="" id="">
+                        <button id="nextStep3" class="nextStep-btn btn btn-primary" >Next</button>
                     </div>
-                    <div class="step step4">
-                        <p>Select a picture</p>
-                        <div class="image-wrapper">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img class="choice-img img-fluid" src="./img/bgs/annie-spratt-pc00EDmxodI-unsplash.png" alt="">
-                                </div>
-                                <div class="col-md-4">
-                                    <img  class="choice-img img-fluid" src="./img/bgs/ben-white-eRMTy4RqULg-unsplash.png" alt="background choice">
-                                </div>
-                                <div class="col-md-4">
-                                    <img  class="choice-img img-fluid" src="./img/bgs/ben-white-oAU4YHeMFSI-unsplash.png" alt="background choice">
-                                </div>
-                                <div c lass="col-md-4">
-                                    <img  class="choice-img img-fluid" src="./img/bgs/sincerely-media--JBu1u-JcjQ-unsplash.png" alt="background choice">
-                                </div>
-                                <div class="col-md-4">
-                                    <img  class="choice-img img-fluid" src="./img/bgs/sincerely-media-_-hjiem5TqI-unsplash.png" alt="background choice">
-                                </div>
-                                <div class="col-md-4">
-                                    <img  class="choice-img img-fluid" src="./img/bgs/sincerely-media-8EhZobADF8M-unsplash.png" alt="background choice">
-                                </div>
+                    <div id="step4" class="step step4" style="display: none">
+                        <p class="title">What do you want to tell ?</p>
+                        <textarea id="message" class="form-control customInput" placeholder="Please type a message or not, that depend on you..." type="text" name="" id=""></textarea>
+                        <button id="nextStep4" class="nextStep-btn btn btn-primary" >Next</button>
+                    </div>
+                    <div id="step5" class="step step5" style="display: none">
+                        <p class="title">Result</p>
+                        <div class="resultContainer" id="resultImg">
+                            <div class="overlayDark"></div>
+                            <div class="textContainer">
+                                <p id="receiver" class="resultText receiver"></p>
+                                <p id="sender" class="resultText"></p>
+                                <p id="messageFinal" class="resultText"></p>
                             </div>
                         </div>
-                        <button class="nextStep-btn btn btn-primary">Next</button>
                     </div>
                 </div>
             </div>

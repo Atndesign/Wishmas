@@ -87,7 +87,7 @@ nexBtn4.addEventListener("click",function(){
         var conf = confirm("Send a empty text ?")
         receiver = `Hello ${receiver}!`;
         sender = `${sender} wish you a merry Christmas`;
-        
+
         if(conf){
             messageDisplay.innerText = message;
             changeStep(5)
@@ -97,7 +97,7 @@ nexBtn4.addEventListener("click",function(){
         }
     }
     else{
-        receiver = `Hello ${receiver}! \n ${sender} wish you a merry Christmas, here the message`;
+        receiver = `Hello ${receiver}!`;
         messageDisplay.innerText = message;
         changeStep(5)
     }

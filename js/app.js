@@ -82,11 +82,12 @@ nexBtn4.addEventListener("click",function(){
     var messageDisplay = document.getElementById("messageFinal");
     resultImg.style.backgroundImage = `url('${bg}')`;
     //Assignement
-    receiver = `Hello ${receiver}! \n ${sender} wish you a merry Christmas`;
 
-    receiverDisplay.innerText = receiver;
     if(message == ""){
         var conf = confirm("Send a empty text ?")
+        receiver = `Hello ${receiver}!`;
+        sender = `${sender} wish you a merry Christmas`;
+        
         if(conf){
             messageDisplay.innerText = message;
             changeStep(5)
@@ -96,9 +97,12 @@ nexBtn4.addEventListener("click",function(){
         }
     }
     else{
+        receiver = `Hello ${receiver}! \n ${sender} wish you a merry Christmas, here the message`;
         messageDisplay.innerText = message;
         changeStep(5)
     }
+    senderDisplay.innerText = sender;
+    receiverDisplay.innerText = receiver;
 })
 
 //Functions

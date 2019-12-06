@@ -1,0 +1,14 @@
+{
+  "name": "christmaswish",
+  "version": "1.0.0",
+  "description": "This is a christmas wishing card generator made with JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Moulun",
+  "license": "ISC",
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.5"
+  }
+}

@@ -103,11 +103,15 @@ nexBtn4.addEventListener("click",function(){
     }
     senderDisplay.innerText = sender;
     receiverDisplay.innerText = receiver;
+    var downloadBtn = document.getElementById("downloadBtn");
     html2canvas(document.querySelector("#resultImg")).then(canvas => {
-        document.body.appendChild(canvas)
-        var img = canvas.toDataURL("image/png").replace(/^data:image\/(png|jpg);base64,/, '');
-        console.log(img);
+        var img = canvas.toDataURL("image/png");
+        downloadBtn.href = img
     });
+    var backToBegin = document.getElementById("backToBegin");
+    backToBegin.addEventListener("click", function(){
+        changeStep(1);
+    })
 })
 
 //Functions

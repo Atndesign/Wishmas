@@ -1,9 +1,6 @@
-.step2,.step3, .step4{
+.step2,.step3, .step4,.step5{
     height: 100%;
-   .customInput{
-    margin-bottom: (40 / 16) * $spacer;
-   }
-   .nextStep-btn{
+    .nextStep-btn{
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -13,6 +10,9 @@
         color: white;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+   .customInput{
+    margin-bottom: (40 / 16) * $spacer;
+   }
 }
     
 

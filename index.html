@@ -51,24 +51,33 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="nextStep1" class="nextStep-btn btn btn-primary" >Next</button>
+                        <!-- <button id="nextStep1" class="nextStep-btn btn btn-primary" >Next</button> -->
                     </div>
                     <div id="step2" class="step step2" style="display: none">
                         <p class="title">Who are you ?</p>
                         <p>What's your name</p>
                         <input id="senderName" class="form-control customInput" placeholder="Let know your receiver, who you are..." type="text" name="" id="">
-                        <button id="nextStep2" class="nextStep-btn btn btn-primary" >Next</button>
+                        <div class="nextStep-btn-container">
+                            <button id="nextStep2" class="nextStep-btn btn btn-primary" >Next</button>
+                            <button id="prevStep1" class="nextStep-btn btn btn-danger" >Previous</button>
+                        </div>
                     </div>
                     <div id="step3" class="step step3" style="display: none">
                         <p class="title">Who is the card for ?</p>
                         <p>What’s her/his name ?</p>
                         <input id="receiverName" class="form-control customInput" placeholder="Let know your receiver, who you are..." type="text" name="" id="">
-                        <button id="nextStep3" class="nextStep-btn btn btn-primary" >Next</button>
+                        <div class="nextStep-btn-container">
+                            <button id="nextStep3" class="nextStep-btn btn btn-primary" >Next</button>
+                            <button id="prevStep2" class="nextStep-btn btn btn-danger" >Previous</button>
+                        </div>
                     </div>
                     <div id="step4" class="step step4" style="display: none">
                         <p class="title">What do you want to tell ?</p>
                         <textarea id="message" class="form-control customInput" placeholder="Please type a message or not, that depend on you..." type="text" name="" id=""></textarea>
-                        <button id="nextStep4" class="nextStep-btn btn btn-primary" >Next</button>
+                        <div class="nextStep-btn-container">
+                            <button id="nextStep4" class="nextStep-btn btn btn-primary" >Next</button>
+                            <button id="prevStep3" class="nextStep-btn btn btn-danger" >Previous</button>
+                        </div>
                     </div>
                     <div id="step5" class="step step5" style="display: none">
                         <p class="title">Result</p>
@@ -80,8 +89,8 @@
                                 <p id="messageFinal" class="resultText"></p>
                             </div>
                         </div>
-                        <div class="nextStep-btn">
-                            <a href="" id="downloadBtn" class="result-btn d-block btn btn-primary" download="Something.png" >Download</a>
+                        <div class="nextStep-btn-container">
+                            <a href="" id="downloadBtn" class="result-btn d-block btn btn-primary" download="Wishing-Card.png" >Download</a>
                             <button id="backToBegin" class="result-btn d-block btn btn-danger">Make another one</button>
                         </div>
                     </div>

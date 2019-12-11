@@ -5,15 +5,20 @@ var step2Container = document.querySelector("#step2");
 var step3Container = document.querySelector("#step3");
 var step4Container = document.querySelector("#step4");
 var step5Container = document.querySelector("#step5");
+//Next
 var nexBtn1 = document.getElementById("nextStep1"); 
 var nexBtn2 = document.getElementById("nextStep2"); 
 var nexBtn3= document.getElementById("nextStep3");
 var nexBtn4 = document.getElementById("nextStep4");
 var nexBtn5 = document.getElementById("nextStep5");
+//Previous
+var prevBtn1 = document.getElementById("prevStep1"); 
+var prevBtn2 = document.getElementById("prevStep2"); 
+var prevBtn3= document.getElementById("prevStep3");
+var prevBtn4 = document.getElementById("prevStep4");
+
 
 var steps = [step1Container,step2Container,step3Container,step4Container,step5Container];
-var nextBtns = [nexBtn1,nexBtn2,nexBtn3,nexBtn4,nexBtn5];
-
 var resultImg = document.getElementById("resultImg");
 
 //Final vars
@@ -25,23 +30,10 @@ var choiceArr = Array.from(choices);
 
 choices.forEach(img => {
     img.addEventListener("click", function(){
-        // removeClass(choices,"active");
-        // removeClass(choices,"checkedAnim");
-        // img.classList.add("active")
-        // img.classList.add("checkedAnim");
         bg = img.src;
         changeStep(2)
-        // if(imgLink != null){
-        //     nexBtn1.disabled = false
-        // }
-
     })
 })
-// nexBtn1.addEventListener("click",function(){
-//     bg = imgLink;
-//     changeStep(2)
-// })
-
 //step 2
 nexBtn2.addEventListener("click",function(){
     var senderName = document.getElementById("senderName").value;
@@ -110,6 +102,17 @@ nexBtn4.addEventListener("click",function(){
     backToBegin.addEventListener("click", function(){
         changeStep(1);
     })
+})
+
+//back
+prevBtn1.addEventListener("click",function(){
+    changeStep(1);
+})
+prevBtn2.addEventListener("click",function(){
+    changeStep(2);
+})
+prevBtn3.addEventListener("click",function(){
+    changeStep(3);
 })
 
 //Functions

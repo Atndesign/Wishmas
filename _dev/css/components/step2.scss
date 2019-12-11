@@ -1,10 +1,13 @@
 .step2,.step3, .step4,.step5{
     height: 100%;
-    .nextStep-btn{
+    .nextStep-btn-container{
         position: fixed ;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
+    }
+    .nextStep-btn{
         padding: $spacer;
         width: 100%;
         color: white;

@@ -1,7 +1,7 @@
 .step2,.step3, .step4,.step5{
     height: 100%;
     .nextStep-btn{
-        position: absolute;
+        position: fixed ;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);

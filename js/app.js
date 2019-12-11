@@ -22,27 +22,25 @@ var bg,sender,receiver,messageText;
 //step 1
 var choices = document.querySelectorAll('.choice-img-container > img')
 var choiceArr = Array.from(choices);
-var imgLink;
-
 
 choices.forEach(img => {
     img.addEventListener("click", function(){
-        
-        removeClass(choices,"active");
-        removeClass(choices,"checkedAnim");
-        img.classList.add("active")
-        img.classList.add("checkedAnim");
-        imgLink = img.src;
-        if(imgLink != null){
-            nexBtn1.disabled = false
-        }
+        // removeClass(choices,"active");
+        // removeClass(choices,"checkedAnim");
+        // img.classList.add("active")
+        // img.classList.add("checkedAnim");
+        bg = img.src;
+        changeStep(2)
+        // if(imgLink != null){
+        //     nexBtn1.disabled = false
+        // }
+
     })
 })
-nexBtn1.addEventListener("click",function(){
-    bg = imgLink;
-    changeStep(2)
-})
-
+// nexBtn1.addEventListener("click",function(){
+//     bg = imgLink;
+//     changeStep(2)
+// })
 
 //step 2
 nexBtn2.addEventListener("click",function(){
